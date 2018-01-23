@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   	resources :post_images, only: [:new, :create, :index, :show, :destroy] do
   	resource :favorites, only: [:create, :destroy]
   	resource :post_comments, only: [:create, :destroy]
-    resources :users, only: [:show]
+    resources :users, only: [:show, :edit, :update]
    	end
 
    	root 'post_images#index'
